@@ -1,0 +1,9 @@
+{
+    "Hidden_Backdoor_Signature": {
+        "md5": "00aaff11bbee22ccdd33ee44ff556677",
+        "sha256": "abc123def456abc123def456abc123def456abc123def456abc123def456abc123def456"
+    },
+    "Test_Virus_Definition": {
+        "sha1": "f0e1d2c3b4a596877968574635241302"
+    }
+}

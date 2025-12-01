@@ -1,0 +1,8 @@
+# Arquivo de configuração de exemplo para o AegisMon
+scanner:
+  hashes:
+    # Sobrescreve a lista padrão para usar apenas estes dois hashes
+    - md5
+    - sha256
+  # Sobrescreve o nível de log padrão (INFO)
+  log_level: debug

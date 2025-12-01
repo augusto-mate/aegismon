@@ -1,0 +1,8 @@
+# _config.yml
+# Arquivo de configuração para GitHub Pages
+
+title: AegisMon - Security Scanner
+description: Advanced Security Scanner Toolkit (v1.0.0)
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-minimal
