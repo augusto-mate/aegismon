@@ -1,0 +1,39 @@
+# .github/workflows/tests.yml
+name: CI Checks & Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.10", "3.12"] # Testar em versões importantes
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # Instalar o projeto e ferramentas de teste
+          pip install -e . pytest
+
+      - name: Run tests
+        run: |
+          # Este comando roda seus testes.
+          # Você precisará criar o diretório 'tests/' e seus arquivos de teste.
+          pytest --verbose
