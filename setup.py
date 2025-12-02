@@ -1,7 +1,6 @@
 # /setup.py
 from setuptools import setup, find_packages
 
-# Função para ler o número da versão do arquivo VERSION
 def read_version():
     with open("VERSION", "r") as f:
         return f.read().strip()
@@ -11,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="aegismon",
-    version=read_version(), # LÊ DO ARQUIVO VERSION
+    version=read_version(),
     description="AegisMon - Advanced Security Scanner Toolkit",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -37,3 +36,4 @@ setup(
     ],
     python_requires=">=3.8",
 )
+
