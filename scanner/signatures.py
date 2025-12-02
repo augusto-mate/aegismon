@@ -6,7 +6,7 @@ Signatures module: mantém a base de assinaturas usadas pelo scanner.
 import json
 import yaml
 from pathlib import Path
-from ..logger import get_logger
+from aegismon.logging.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -51,4 +51,3 @@ def load_signature_file(path: str):
 
     except Exception as e:
         logger.exception(f"Erro ao carregar assinaturas de {path}: {e}")
-
