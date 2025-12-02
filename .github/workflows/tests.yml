@@ -1,4 +1,4 @@
-# .github/workflows/tests.yml (Versão Final Otimizada)
+# .github/workflows/tests.yml - SOLUÇÃO DEFINITIVA
 name: CI Checks & Tests
 
 on:
@@ -25,15 +25,16 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies and project
+      - name: Install dependencies (pytest, pyyaml)
         run: |
           python -m pip install --upgrade pip
-          # 1. Instala as dependências (incluindo pytest e pyyaml)
           pip install -r requirements.txt
-          # 2. INSTALA O PROJETO (IMPORTANTE): Instala em modo editável para que pytest o encontre
-          pip install -e .
+          pip install pytest  # Garante que pytest esteja instalado
 
-      - name: Run tests
+      - name: Run tests with EXPLICIT PYTHONPATH
         run: |
-          # Executa pytest a partir do diretório raiz
+          # 🚨 CORREÇÃO CRÍTICA:
+          # Força o diretório raiz (onde a pasta 'aegismon' está) a ser incluído 
+          # no PYTHONPATH, resolvendo a ambiguidade da importação.
+          export PYTHONPATH=$PWD:$PYTHONPATH
           pytest --verbose
