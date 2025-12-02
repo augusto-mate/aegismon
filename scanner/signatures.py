@@ -1,43 +1,33 @@
 # aegismon/scanner/signatures.py
+"""
+Signatures module: mantém a base de assinaturas usadas pelo scanner.
+"""
 import json
 import os
-from ..logging.logger import get_logger
+from ..logger import get_logger   # corrigido: antes era ..logging.logger
 
+# Instância de logger para este módulo
 logger = get_logger(__name__)
 
-# Banco de dados de assinaturas global
+# Exemplo de base de assinaturas (pode ser expandida futuramente)
 SIGNATURE_DB = {
-    # Exemplo de assinatura do arquivo de teste EICAR
-    "EICAR_Test_File": {
-        "md5": "44d88612fea8a8f36de82e1278abb02f",
-        "sha1": "3395856ce81f2b7382dee72602f798b6c430e1d1",
-        "sha256": "275a021aa907954e74e471f6607204f131a4038a37951a8048ed33857e43685f"
+    "EICAR_TEST_FILE": {
+        "pattern": "X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*",
+        "severity": "low",
+        "description": "Arquivo de teste EICAR"
     },
-    "Demo_Malware_1": {
-        "md5": "a1b2c3d4e5f600112233445566778899"
+    "MALWARE_SAMPLE": {
+        "pattern": "malicious_code_signature",
+        "severity": "high",
+        "description": "Assinatura genérica de malware"
     }
 }
 
-def load_signature_file(filepath):
-    """
-    Carrega assinaturas de um arquivo JSON externo e as mescla 
-    no banco de dados global (SIGNATURE_DB).
-    """
-    global SIGNATURE_DB
-    
-    if not os.path.exists(filepath):
-        logger.warning(f"Arquivo de assinaturas não encontrado: {filepath}")
-        return
-        
-    try:
-        with open(filepath, "r", encoding="utf-8") as f:
-            external_signatures = json.load(f)
-            
-        # Mesclar novas assinaturas
-        SIGNATURE_DB.update(external_signatures)
-        logger.info(f"{len(external_signatures)} assinaturas externas carregadas.")
-        
-    except json.JSONDecodeError:
-        logger.error(f"Erro ao decodificar JSON em {filepath}.")
-    except Exception as e:
-        logger.error(f"Erro ao carregar arquivo de assinaturas: {e}")
+def get_signature(name: str):
+    """Retorna uma assinatura pelo nome, ou None se não existir."""
+    sig = SIGNATURE_DB.get(name)
+    if sig:
+        logger.debug(f"Signature '{name}' encontrada: {sig}")
+    else:
+        logger.warning(f"Signature '{name}' não encontrada.")
+    return sig
