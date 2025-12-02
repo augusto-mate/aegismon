@@ -1,13 +1,25 @@
-# 🛡 AegisMon — Advanced Security Scanner Toolkit 🔒
+<h1 align="center">🛡 AegisMon — Advanced Security Scanner Toolkit 🔒</h1>
 
-[![Build](https://github.com/augusto-mate/aegismon/actions/workflows/tests.yml/badge.svg)](https://github.com/augusto-mate/aegismon/actions)
-[![Release](https://img.shields.io/github/v/release/augusto-mate/aegismon)](https://github.com/augusto-mate/aegismon/releases)
-[![License](https://img.shields.io/github/license/augusto-mate/aegismon)](LICENSE)
-![Coverage](https://img.shields.io/badge/coverage-pending-black)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-[![Docs](https://img.shields.io/badge/docs-online-gold)](https://augusto-mate.github.io/aegismon/)
+<p align="center">
+  <a href="https://github.com/augusto-mate/aegismon/actions">
+    <img src="https://github.com/augusto-mate/aegismon/actions/workflows/tests.yml/badge.svg" alt="Build">
+  </a>
+  <a href="https://github.com/augusto-mate/aegismon/releases">
+    <img src="https://img.shields.io/github/v/release/augusto-mate/aegismon" alt="Release">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/augusto-mate/aegismon" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/coverage-pending-black" alt="Coverage">
+  <img src="https://img.shields.io/badge/python-3.8%2B-blue" alt="Python">
+  <a href="https://augusto-mate.github.io/aegismon/">
+    <img src="https://img.shields.io/badge/docs-online-gold" alt="Docs">
+  </a>
+</p>
 
-<img src="./docs/assets/logo-aegismon-minimal.png" alt="Logo AegisMon" width="160" />
+<p align="center">
+    <img src="./docs/assets/logo-aegismon-minimal.png" alt="Logo AegisMon" width="350" style="border:2px solid #ddd; padding:15px; border-radius:10px;">
+</p>
 
 **AegisMon** é uma ferramenta de código aberto para cibersegurança projetada para realizar varreduras de integridade de arquivos (FIM - File Integrity Monitoring), detecção de malware por assinatura e avaliação heurística de risco. Desenvolvido para ser modular e extensível, utiliza uma interface de linha de comando robusta.
 
@@ -25,20 +37,20 @@
 
 ```
 aegismon/
-├── cli.py                 # Interface de linha de comando
-├── .github/workflows/     # CI/CD (deploy e testes)
-├── docs/assets/           # Logos e elementos visuais do projeto 
-├── logging/               # Configuração e utilitários de logging
-├── reports/               # Geração de relatórios (JSON, etc.)
-├── scanner/               # Núcleo de escaneamento e assinaturas
-├── tests/                 # Testes automatizados
-├── utils/                 # Funções auxiliares
-├── LICENSE                # Licença MIT
-├── CHANGELOG.md           # Histórico de alterações
-├── CONTRIBUTING.md        # Diretrizes de contribuição
-├── README.md              # Documentação principal
-├── setup.py               # Instalação via setuptools
-└── requirements.txt       # Dependências do projeto
+├── cli.py                   # Interface de linha de comando
+├── .github/workflows/       # CI/CD (deploy e testes)
+├── docs/assets/             # Logos e elementos visuais do projeto 
+├── logging/                 # Configuração e utilitários de logging
+├── reports/                 # Geração de relatórios (JSON, etc.)
+├── scanner/                 # Núcleo de escaneamento e assinaturas
+├── tests/                   # Testes automatizados
+├── utils/                   # Funções auxiliares
+├── LICENSE                  # Licença MIT
+├── CHANGELOG.md             # Histórico de alterações
+├── CONTRIBUTING.md          # Diretrizes de contribuição
+├── README.md                # Documentação principal
+├── setup.py                 # Instalação via setuptools
+└── requirements.txt         # Dependências do projeto
 ```
 
 ## ⚙️ Instalação e Uso
@@ -100,4 +112,5 @@ Consulte o arquivo [`LICENSE`](LICENSE) para mais detalhes.
 
 ---
 
-> 🌟*AegisMon — monitorar, proteger e impressionar: um marco de inovação que transforma código em impacto.*
+> 🌟 *AegisMon — monitorar, proteger e impressionar: um marco de inovação que transforma código em impacto.*
+
