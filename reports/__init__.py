@@ -4,4 +4,3 @@ Reports module: generation and export of scan reports.
 """
 
 from .generator import ReportGenerator
-
