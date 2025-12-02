@@ -3,13 +3,9 @@ name: CI Checks & Tests
 
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
 
 jobs:
   build:
@@ -20,6 +16,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
@@ -30,10 +27,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           # Instalar o projeto e ferramentas de teste
-          pip install -e . pytest
+          pip install -e .
+          pip install pytest
 
       - name: Run tests
         run: |
           # Este comando roda seus testes.
-          # Você precisará criar o diretório 'tests/' e seus arquivos de teste.
-          pytest --verbose
+          pytest tests/ --verbose
