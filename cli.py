@@ -1,4 +1,4 @@
-# aegismon/cli.py
+# cli.py
 import argparse
 import json
 import yaml
@@ -7,7 +7,7 @@ import os
 from .scanner.core import Scanner
 from .scanner.signatures import load_signature_file
 from .reports.json_report import JSONReport # Classe JSONReport
-from .logging.logger import get_logger
+from aegismon.logging.logger import get_logger
 
 # Função auxiliar: carregar config YAML/JSON
 def load_config(path):
@@ -113,4 +113,5 @@ def main():
     return 0
 
 if __name__ == "__main__":
+
     sys.exit(main())
