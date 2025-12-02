@@ -3,7 +3,7 @@
 import os
 import hashlib
 from datetime import datetime
-from ..logging.logger import get_logger
+from aegismon.logging.logger import get_logger
 from .signatures import SIGNATURE_DB
 
 logger = get_logger(__name__)
@@ -143,3 +143,4 @@ class Scanner:
                 "detections": len(filtered_results),
             }
         }
+
