@@ -1,14 +1,8 @@
 # aegismon/scanner/__init__.py
-""" Inicialização do pacote scanner. """
+"""
+Scanner package: fornece classes e funções para análise de arquivos,
+incluindo assinaturas, heurísticas e múltiplos algoritmos de hashing.
+"""
 
-# Importa os principais componentes para fácil acesso
 from .core import Scanner, ScanResult
-from .signatures import load_signature_file, SIGNATURE_DB
-
-__all__ = [
-    'Scanner',
-    'ScanResult',
-    'load_signature_file',
-    'SIGNATURE_DB'
-
-]
+from .signatures import SIGNATURE_DB, get_signature, load_signature_file
