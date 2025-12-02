@@ -10,4 +10,5 @@ __all__ = [
     'ScanResult',
     'load_signature_file',
     'SIGNATURE_DB'
+
 ]
