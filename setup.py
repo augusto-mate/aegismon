@@ -10,20 +10,21 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name='aegismon',
+    name="aegismon",
     version=read_version(), # LÊ DO ARQUIVO VERSION
-    description='AegisMon - Advanced Security Scanner Toolkit',
+    description="AegisMon - Advanced Security Scanner Toolkit",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author='augusto-mate', 
-    url='https://github.com/augusto-mate/aegismon',
-    packages=find_packages(),
+    author="augusto-mate",
+    url="https://github.com/augusto-mate/aegismon",
+    packages=find_packages(include=["aegismon", "aegismon.*"]),
+    include_package_data=True,
     install_requires=[
-        'pyyaml>=6.0',
+        "pyyaml>=6.0",
     ],
     entry_points={
-        'console_scripts': [
-            'aegismon=aegismon.cli:main',
+        "console_scripts": [
+            "aegismon=aegismon.cli:main",
         ],
     },
     classifiers=[
@@ -34,5 +35,5 @@ setup(
         "Topic :: Security",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    python_requires='>=3.8',
+    python_requires=">=3.8",
 )
