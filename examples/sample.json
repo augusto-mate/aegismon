@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "timestamp": "2025-01-01T12:00:00Z",
+      "level": "INFO",
+      "latency_ms": 120,
+      "source": "internal"
+    },
+    {
+      "timestamp": "2025-01-01T12:05:00Z",
+      "level": "ERROR",
+      "latency_ms": 800,
+      "source": "external"
+    },
+    {
+      "timestamp": "2025-01-01T12:10:00Z",
+      "level": "WARN",
+      "latency_ms": 450,
+      "source": "unknown"
+    }
+  ]
+}
