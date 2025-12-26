@@ -25,6 +25,18 @@
 
 ---
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://augusto-mate-aegismon.streamlit.app/)
+
+## 🟥 Live Demo
+Explore a versão demo interativa do AegisMon em Streamlit Cloud:  
+- Upload de telemetria JSON  
+- Detecção de anomalias simulada  
+- Geração de relatório auditável  
+
+**⚠️ Nota:** Alguns testes automatizados ainda estão em revisão, mas a demo funciona e mostra o conceito principal.
+
+---
+
 ## ✨ Funcionalidades Principais
 
 * **Detecção Multifacetada:** Utiliza Assinaturas (Hashing), Heurísticas de Risco e Regras Personalizadas.
@@ -39,7 +51,8 @@
 aegismon/
 ├── cli.py                   # Interface de linha de comando
 ├── .github/workflows/       # CI/CD (deploy e testes)
-├── docs/assets/             # Logos e elementos visuais do projeto 
+├── docs/assets/             # Logos e elementos visuais do projeto
+├── examples/             	 # Dados fictícios de telemetria/políticas 
 ├── logging/                 # Configuração e utilitários de logging
 ├── reports/                 # Geração de relatórios (JSON, etc.)
 ├── scanner/                 # Núcleo de escaneamento e assinaturas
@@ -52,6 +65,8 @@ aegismon/
 ├── setup.py                 # Instalação via setuptools
 └── requirements.txt         # Dependências do projeto
 ```
+
+---
 
 ## ⚙️ Instalação e Uso
 
@@ -89,6 +104,8 @@ aegismon scan /var/www --config ./config/config.yaml
 aegismon scan /etc --signatures ./config/signatures.json
 ```
 
+---
+
 ## 🤝 Contribuindo
 
 Cada contribuição fortalece o **AegisMon** como projeto de portfólio e aprendizado.  
@@ -108,9 +125,10 @@ Consulte o arquivo [`LICENSE`](LICENSE) para mais detalhes.
 
 - **Augusto Mate** — Desenvolvedor e mantenedor principal do AegisMon    
 	- GitHub: [@augusto-mate](https://github.com/augusto-mate)  
-	- LinkedIn: [linkedin.com/in/augusto-mate/](https://www.linkedin.com/in/augusto-mate/)
+	- LinkedIn: [linkedin.com/in/augusto-mate/](https://www.linkedin.com/in/augusto-mate)
 
 ---
 
-> 🌟 *AegisMon — monitorar, proteger e impressionar: um marco de inovação que transforma código em impacto.*
+> 🌟 *AegisMon — monitorar, proteger e impressionar: mais que um projeto, um marco de inovação e showcase de excelência.*
+
 
