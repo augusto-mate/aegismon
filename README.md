@@ -129,6 +129,7 @@ Consulte o arquivo [`LICENSE`](LICENSE) para mais detalhes.
 
 ---
 
-> 🌟 *AegisMon — monitorar, proteger e impressionar: mais que um projeto, um marco de inovação e showcase de excelência.*
+> 🌟 *AegisMon — monitorar, proteger e impressionar: um marco de inovação e showcase de excelência.*
+
 
 
